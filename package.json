@@ -25,7 +25,7 @@
     "browser-extension-copy": "cp src/bundles/browser-extension/bundle.js dist/browser-extension/togglific.js && cp src/browser-extension/background.js dist/browser-extension/ && cp src/browser-extension/manifest.json dist/browser-extension/ && cp -r src/browser-extension/icons dist/browser-extension/",
     "browser-extension-zip": "cd dist/browser-extension/ && bestzip togglific.zip *",
     "copy-to-brochure": "cp ./dist/bookmarklet/togglific.js ./brochure/javascript/togglific.js",
-    "copy-to-npm": "cp ./.gitignore ./dist/npm-package && cp ./LICENSE.md ./dist/npm-package && cp ./package.json ./dist/npm-package  && cp ./README.md ./dist/npm-package",
+    "copy-to-npm": "cp ./.gitignore ./dist/npm-package && cp ./LICENSE.txt ./dist/npm-package && cp ./package.json ./dist/npm-package  && cp ./README.md ./dist/npm-package",
     "release": "bump --version && bump --prompt --tag --grep ./src/**/togglific.js && cp ./package.json ./dist/npm-package",
     "precommit": "npm run build && npm test && echo '🐮 Moo (Now run `git add . && git commit --no-verify -m \"informative message\"` to push the build you just made. 👆)' | cowsay",
     "test": "karma start",

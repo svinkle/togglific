@@ -1,0 +1,8 @@
+language: node_js
+node_js:
+  - "11"
+sudo: enabled
+
+# Run the tests
+script:
+  - npm test
