@@ -1,0 +1,311 @@
+/* You don't need any of this, it's just for the examples! */
+
+body {
+  font-family: sans-serif;
+}
+
+.container {
+  border: solid black 3px;
+  height: 300px;
+  padding: 10px;
+  position: relative;
+  width: 500px;
+}
+
+.toggle-button {
+  position: fixed;
+  right: 20px;
+  top: 10px;
+  z-index: 99999;
+}
+
+.toggle-button[aria-pressed='true'] {
+  outline: 0;
+  padding: 7px 15px 8px;
+  background: #84210e;
+  background: -moz-linear-gradient(top, #84210e 0, #c03c26 100%);
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(0%, #84210e),
+    color-stop(100%, #c03c26)
+  );
+  background: -webkit-linear-gradient(top, #84210e 0, #c03c26 100%);
+  background: -o-linear-gradient(top, #84210e 0, #c03c26 100%);
+  background: -ms-linear-gradient(top, #84210e 0, #c03c26 100%);
+  background: linear-gradient(to bottom, #84210e 0, #c03c26 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#84210e', endColorstr='#c03c26', GradientType=0);
+  color: #fff;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, .5);
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, .35) .5em 0 0 #000;
+  -moz-box-shadow: 0 0 10px rgba(0, 0, 0, .35) .5em 0 0 #000;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .35) .5em 0 0 #000;
+}
+
+.bookmarklet-link {
+  background: black;
+  border-radius: 3px;
+  display: inline-block;
+  padding: 5px 10px;
+  text-decoration: none;
+}
+
+.bookmarklet-link:focus,
+.bookmarklet-link:hover {
+  text-decoration: underline;
+}
+
+.note {
+  color: #333;
+  margin: 0 !important;
+}
+
+/* requestAnimationFrame() Example */
+
+.raf-box {
+  background-color: red;
+  height: 100px;
+  left: 50px;
+  position: absolute;
+  top: 150px;
+  width: 100px;
+}
+
+/* jQuery Example */
+
+.jquery-box {
+  background-color: green;
+  height: 200px;
+  width: 300px;
+}
+
+/* CSS Transition Example */
+
+.transition-example .header {
+  background-color: #222;
+  color: #fff;
+  padding: 20px 0;
+  position: relative;
+  text-align: center;
+}
+
+.transition-example .title {
+  color: #fff;
+  margin: 0;
+}
+
+.transition-example .header a {
+  color: #fff;
+}
+
+.transition-example .menu {
+  left: 0;
+  overflow-y: hidden;
+  max-height: 0;
+  position: absolute;
+  top: 70px;
+  transition-property: all;
+  transition-duration: .5s;
+  transition-timing-function: ease-out;
+  width: 100%;
+}
+
+.transition-example .menu.active {
+  max-height: 150px;
+}
+
+.transition-example .menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.transition-example .menu li:nth-child(odd) {
+  background-color: #333;
+}
+
+.transition-example .menu li:nth-child(even) {
+  background-color: #444;
+}
+
+.transition-example .menu a {
+  display: block;
+  padding: .5em;
+  text-align: left;
+}
+
+.transition-example .menu-button {
+  background: transparent !important;
+  border: none;
+  cursor: pointer;
+  font-size: 2em;
+  line-height: 1;
+  margin: 0;
+  padding: 0 20px !important;
+  position: absolute;
+  right: .3em;
+  top: .2em;
+}
+
+.transition-example .menu-button:hover {
+  padding: 0 20px !important;
+}
+
+/* Animated Background Image Example */
+
+.animated-background-image {
+  background: #ffffff url(../images/batman-starwars.gif) 0 0 no-repeat;
+  color: white;
+  height: 269px;
+  text-align: center;
+  text-shadow: 1px 1px 1px #000;
+  width: 500px;
+}
+
+/* CSS Animation Example */
+
+.ball {
+  animation: 1s ease-out 0s infinite alternate none ball;
+  background: #f54f00;
+  border: solid black 2px;
+  border-radius: 100%;
+  bottom: 0;
+  height: 100px;
+  left: 50%;
+  margin-left: -50px;
+  overflow: hidden;
+  position: absolute;
+  width: 100px;
+}
+
+.ball:after {
+  border: solid black 1px;
+  content: '';
+  height: 0;
+  left: 0;
+  margin-top: -1px;
+  position: absolute;
+  top: 50%;
+  width: 100px;
+}
+
+.ball:before {
+  border: solid black 1px;
+  content: '';
+  height: 100px;
+  left: 50%;
+  margin-left: -1px;
+  position: absolute;
+  top: 0%;
+  width: 0;
+}
+
+.ball span:after {
+  border: solid black 2px;
+  border-radius: 50%;
+  content: '';
+  height: 100px;
+  left: -2px;
+  position: absolute;
+  top: 65%;
+  width: 100px;
+}
+
+.ball span:before {
+  border: solid black 2px;
+  border-radius: 50%;
+  content: '';
+  height: 100px;
+  left: -2px;
+  position: absolute;
+  top: -70%;
+  width: 100px;
+}
+
+@keyframes ball {
+  from {
+    bottom: 0;
+    height: 100px;
+  }
+  to {
+    bottom: 50%;
+  }
+}
+
+/* Video Background Example */
+
+.video-example .video-page-container {
+  position: relative;
+}
+
+.video-example video {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1000;
+  overflow: hidden;
+}
+
+.video-example .video-container:after {
+  display: block;
+  z-index: 100;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, .5);
+}
+
+.video-example .page-content {
+  color: white;
+  margin: 0 auto;
+  padding: 40px;
+  position: relative;
+  z-index: 100;
+  max-width: 1410px;
+}
+
+/* iFrame Example */
+
+.iframe-example {
+  border: 0;
+  height: 440px;
+  width: 100%;
+}
+
+/* SVG example */
+.svg-example {
+  background-color: #28505d;
+}
+
+.planePath {
+  stroke: #d9dada;
+  stroke-width: .1%;
+  stroke-width: .5%;
+  stroke-dasharray: 1% 2%;
+  stroke-linecap: round;
+  fill: none;
+}
+
+.fil1 {
+  fill: #d9dada;
+}
+
+.fil2 {
+  fill: #c5c6c6;
+}
+
+.fil4 {
+  fill: #9d9e9e;
+}
+
+.fil3 {
+  fill: #aeafb0;
+}

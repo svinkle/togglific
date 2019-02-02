@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Party</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        text-decoration: none;
+        color: inherit;
+        outline: none;
+        font-weight: inherit;
+        font-size: 1em;
+      }
+
+      html,
+      body {
+        overflow: hidden;
+      }
+
+      body {
+        background-color: #3d3e6f;
+      }
+
+      .party {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 48px;
+        height: 48px;
+      }
+
+      .party * {
+        animation-duration: 0.5s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+      }
+
+      .party:before {
+        content: '';
+        border-right: 24px solid transparent;
+        border-bottom: 24px solid #b4b4f3;
+        border-left: 24px solid transparent;
+        width: 48px;
+        height: 48px;
+        animation: party-body 0.5s linear infinite;
+      }
+
+      .party ul {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background: #7272e9;
+        position: absolute;
+        top: 0;
+        left: 8px;
+        animation-name: party-head;
+      }
+
+      .party ul li:nth-child(3) {
+        border-left: 4px solid transparent;
+        border-top: 16px solid #f5d875;
+        border-right: 4px solid transparent;
+        width: 0;
+        height: 0;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      .party ul li:nth-child(2) {
+        background: #222;
+        border-radius: 50%;
+        width: 6px;
+        height: 6px;
+        position: absolute;
+        top: 8px;
+        left: 8px;
+      }
+
+      .party ul li:nth-child(1) {
+        background: #222;
+        border-radius: 50%;
+        width: 6px;
+        height: 6px;
+        position: absolute;
+        top: 8px;
+        right: 4px;
+      }
+
+      .party ul li:nth-child(4) {
+        border-top: 6px solid transparent;
+        border-left: 6px solid #3df2c2;
+        border-bottom: 6px solid transparent;
+        width: 0;
+        height: 0;
+        position: absolute;
+        left: 50%;
+        top: 0;
+        transform: translateY(-50%);
+        animation-name: party-plume;
+      }
+
+      @keyframes party-body {
+        0%,
+        100% {
+          border-right-width: 24px;
+          border-left-width: 24px;
+          border-bottom-color: #b4b4f3;
+        }
+        25% {
+          border-right-width: 44px;
+          border-left-width: 4px;
+          border-bottom-color: #70eefa;
+        }
+        50% {
+          border-right-width: 24px;
+          border-left-width: 24px;
+          border-bottom-color: #a7f9e3;
+        }
+        75% {
+          border-right-width: 12px;
+          border-left-width: 36px;
+          border-bottom-color: #ff6270;
+        }
+      }
+
+      @keyframes party-head {
+        0%,
+        100% {
+          transform: translate(0%, 0%) rotate(0deg);
+          background: #7272e9;
+        }
+        25% {
+          transform: translate(-37.5%, 12.5%) rotate(22.5deg);
+          background: #51cfdb;
+        }
+        50% {
+          transform: translate(0%, 25%);
+          background: #3ad4ac;
+        }
+        75% {
+          transform: translate(25%, 12.5%) rotate(-11.25deg);
+          background: #e04351;
+        }
+      }
+
+      @keyframes party-glasses {
+        0%,
+        100% {
+          transform: translate(-5%, -5%) rotate(0deg) scale(0.6);
+        }
+        25% {
+          transform: translate(-7.5%, -7.5%) rotate(22.5deg) scale(0.8);
+        }
+        50% {
+          transform: translate(-5%, -6%) scale(0.4);
+        }
+        75% {
+          transform: translate(-6%, -7.5%) rotate(-11.25deg) scale(0.6);
+        }
+      }
+
+      @keyframes party-plume {
+        0%,
+        100% {
+          border-left-color: #3df2c2;
+        }
+        25% {
+          border-left-color: #7272e9;
+        }
+        50% {
+          border-left-color: #ff479e;
+        }
+        75% {
+          border-left-color: #ff8c62;
+        }
+      }
+
+      @keyframes move-down {
+        100% {
+          transform: translate(-50%, -50%) scale(1);
+        }
+      }
+
+      #glasses-wrap {
+        transform: translate(-50%, -500%) scale(4);
+        animation: move-down 4s linear forwards;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+      }
+
+      #glasses {
+        width: 120px;
+        height: 120px;
+        animation: party-glasses 0.5s 4s linear infinite;
+      }
+
+      #glasses::after {
+        content: '';
+        display: block;
+        width: 6px;
+        height: 6px;
+        background: transparent;
+        box-shadow: 30px 42px #ffffff, 36px 42px #ffffff, 48px 42px #ffffff,
+          42px 42px #ffffff, 78px 48px #ffffff, 54px 42px #ffffff,
+          60px 42px #ffffff, 66px 42px #ffffff, 84px 42px #ffffff,
+          90px 42px #ffffff, 78px 42px #ffffff, 72px 42px #ffffff,
+          96px 42px #ffffff, 102px 42px #ffffff, 114px 42px #ffffff,
+          108px 42px #ffffff, 114px 48px #ffffff, 108px 54px #ffffff,
+          102px 60px #ffffff, 96px 60px #ffffff, 90px 60px #ffffff,
+          6px 48px #ffffff, 0px 48px #ffffff, 12px 42px #ffffff,
+          24px 42px #ffffff, 18px 42px #ffffff, 84px 54px #ffffff,
+          72px 48px #ffffff, 66px 54px #ffffff, 60px 60px #ffffff,
+          54px 66px #ffffff, 48px 66px #ffffff, 42px 66px #ffffff,
+          24px 48px #ffffff, 30px 54px #ffffff, 36px 60px #ffffff;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="party" title=":party:">
+      <a title=":party:" href="https://goabstract.com">
+        <ul>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </a>
+    </div>
+    <div id="glasses-wrap"><div id="glasses"></div></div>
+  </body>
+</html>

@@ -1,0 +1,104 @@
+$media-query-1: 25rem;
+$media-query-2: 38rem;
+
+.icon {
+  &__header {
+    fill: $white;
+    height: 24px;
+    position: relative;
+    top: -2px;
+    width: 24px;
+
+    @media (min-width: $media-query-1) {
+      height: 32px;
+      width: 32px;
+    }
+  }
+
+  &__new-window--link {
+    fill: $blue;
+    height: 16px;
+    width: 16px;
+
+    [target='_blank']:focus &,
+    [target='_blank']:hover & {
+      fill: $dark-blue;
+    }
+  }
+
+  &__btn,
+  &__demo-content {
+    fill: $white;
+    height: 24px;
+    width: 24px;
+  }
+
+  &__section-content {
+    fill: $off-black;
+    height: 16px;
+    width: 16px;
+  }
+
+  &__support {
+    fill: $white;
+    height: 48px;
+    width: 48px;
+  }
+
+  &__new-window--footer-link,
+  &__footer-list {
+    fill: $white;
+    height: 16px;
+    width: 16px;
+  }
+
+  &__features-table {
+    fill: $off-black;
+    height: 32px;
+    width: 32px;
+
+    &--no {
+      fill: $red;
+    }
+
+    &--yes {
+      fill: $green;
+    }
+
+    th[scope='row'] & {
+      display: block;
+      margin: 0 auto;
+    }
+
+    @media (min-width: $media-query-2) {
+      th[scope='row'] & {
+        display: inline-block;
+        margin: 0;
+      }
+    }
+  }
+
+  &__down-pointer {
+    fill: $white;
+    height: 48px;
+    width: 48px;
+  }
+}
+
+.icon__container {
+  &--section-content {
+    background-color: $off-white;
+    border: solid $gray 1px;
+    border-radius: 3px;
+    padding: 0 ($spacing * .5);
+  }
+
+  &--support {
+    background-color: $off-black;
+    border-radius: 100%;
+    height: 90px;
+    margin: 0 auto $spacing;
+    padding: ($spacing * 1.3);
+    width: 90px;
+  }
+}
