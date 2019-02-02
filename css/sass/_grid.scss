@@ -1,0 +1,141 @@
+$media-query-1: 25rem;
+$media-query-2: 58rem;
+$media-query-3: 36rem;
+$media-query-4: 68rem;
+
+.grid {
+  display: flex;
+
+  .grid__item {
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-start;
+  }
+}
+
+.grid--header {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  height: $header-height--small;
+  padding: 0 $spacing;
+
+  @media (min-width: $media-query-1) {
+    height: $header-height--medium;
+  }
+
+  @media (min-width: $media-query-4) {
+    height: $header-height--large;
+    padding: 0 ($spacing * 4);
+  }
+
+  .grid__item {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    width: auto;
+
+    @media (min-width: $media-query-4) {
+      justify-content: flex-start;
+    }
+  }
+
+  .grid__item + .grid__item {
+    display: none;
+
+    @media (min-width: $media-query-4) {
+      display: block;
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+}
+
+.grid--footer {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  padding: $spacing;
+
+  @media (min-width: $media-query-3) {
+    padding: $spacing * 2;
+  }
+
+  @media (min-width: $media-query-4) {
+    padding: ($spacing * 2) ($spacing * 4);
+  }
+
+  .grid__item {
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-start;
+    padding: $spacing 0;
+  }
+
+  .grid__item + .grid__item {
+    padding: $spacing 0 0;
+
+    @media (min-width: $media-query-2) {
+      justify-content: flex-end;
+    }
+  }
+}
+
+.grid--center {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: -$spacing;
+  padding: 0 $spacing;
+
+  @media (min-width: $media-query-3) {
+    margin-top: -$spacing;
+    padding: 0 ($spacing * 2);
+  }
+
+  @media (min-width: $media-query-4) {
+    padding: 0 ($spacing * 6);
+  }
+
+  .grid__item {
+    display: flex;
+    flex-grow: 1;
+    padding: $spacing;
+    vertical-align: top;
+    width: 34rem;
+
+    @media (min-width: $media-query-3) {
+      padding: ($spacing * 2) ($spacing * 3) $spacing;
+    }
+  }
+
+  .grid__item + .grid__item {
+    flex-direction: column;
+  }
+
+  .grid__item-content {
+    max-width: 100%;
+    text-align: left;
+
+    p {
+      &:first-of-type {
+        margin: 0 0 $spacing;
+      }
+    }
+  }
+}
+
+.grid--btns {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+
+  .grid__item {
+    align-items: center;
+    display: inline-block;
+    flex-grow: 1;
+    justify-content: center;
+    padding: $spacing;
+    vertical-align: top;
+    width: 14.5rem;
+  }
+}

@@ -1,9 +1,0 @@
-node_modules
-npm-debug.log
-tmp
-/dist
-.sass-cache
-*.css.map
-.DS_Store
-package-lock.json
-v8-compile-cache-0

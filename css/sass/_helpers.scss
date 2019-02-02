@@ -1,0 +1,11 @@
+.center {
+  text-align: center;
+}
+
+.svg-sprite {
+  display: none;
+}
+
+.visuallyhidden {
+  @include visuallyhidden;
+}
