@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.org/svinkle/togglific.svg?branch=master)](https://travis-ci.org/svinkle/togglific)
+[![npm version](https://badge.fury.io/js/togglific.svg)](https://badge.fury.io/js/togglific)
+
 # 🔔 Togglific
 
 > Enjoy a distraction-free web experience!
