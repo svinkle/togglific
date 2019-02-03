@@ -13,7 +13,7 @@ module.exports = function(config) {
     ],
     files: [
       {
-        pattern: './dist/stand-alone/togglific.js',
+        pattern: './test/demo/javascript/togglific.js',
         watched: false,
         served: true,
         included: false,
