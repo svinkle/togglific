@@ -39,7 +39,7 @@ Togglific generates three separate products:
 
    **Note:** State does not persist; the user needs to click the bookmarklet control on each page load to pause animations.
 
-3. **Browser extension**: Available for [Chrome](https://chrome.google.com/webstore/detail/nonnndpheabjkjjnjondfcfgcmhfbckb/publish-accepted?authuser=0&hl=en-US) and [Firefox](https://addons.mozilla.org/en-US/firefox/addon/togglific/).
+3. **Browser extension**: Available for [Chrome](https://chrome.google.com/webstore/detail/togglific/nonnndpheabjkjjnjondfcfgcmhfbckb) and [Firefox](https://addons.mozilla.org/en-US/firefox/addon/togglific/).
 
    With this, `localStorage` is used to persist the selection. The user only has to click the button once to always disable animations for the current domain.
 
@@ -109,7 +109,7 @@ Install the browser extension from one the following browser vendor plugin repos
 
 #### Chrome
 
-Install the browser extension from the [Chrome Web Store](https://chrome.google.com/webstore/detail/nonnndpheabjkjjnjondfcfgcmhfbckb/publish-accepted?authuser=0&hl=en-US)!
+Install the browser extension from the [Chrome Web Store](https://chrome.google.com/webstore/detail/togglific/nonnndpheabjkjjnjondfcfgcmhfbckb)!
 
 #### Firefox
 
