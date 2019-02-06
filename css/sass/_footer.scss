@@ -1,28 +1,18 @@
 .footer {
   background-color: $off-black;
-  color: $white;
-  font-weight: 300;
   overflow: hidden;
+}
+
+.footer__content {
+  color: $white;
+  font-size: 1rem;
+  font-weight: 300;
+  margin: $spacing * 2;
+  text-align: left;
 }
 
 .footer__logo {
   width: 198px;
-}
-
-.footer__list {
-  font-size: 1rem;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  text-align: left;
-}
-
-.footer__list-item {
-  line-height: 1.2;
-
-  &:last-of-type {
-    margin-top: $spacing * 2;
-  }
 }
 
 .footer__list-link {
@@ -30,19 +20,10 @@
   display: inline-block;
   opacity: .8;
   padding: ($spacing * .15) 0;
-  text-decoration: none;
 
   &:focus,
   &:hover {
     color: $white;
     opacity: 1;
-
-    .footer__list-link-text {
-      border-bottom: solid $white 1px;
-    }
   }
-}
-
-.footer__list-link-text {
-  border-bottom: solid transparent 1px;
 }

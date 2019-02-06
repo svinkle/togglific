@@ -49,6 +49,8 @@ $media-query-4: 90rem;
 }
 
 .header__nav-list {
+  align-items: center;
+  display: flex;
   list-style-type: none;
   margin: 0;
   padding: 0;
