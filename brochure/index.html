@@ -63,6 +63,50 @@
                       <span class="header__nav-link-text">Demos</span>
                     </a>
                   </li>
+                  <li class="header__nav-item">
+                    <a
+                      href="https://twitter.com/svinkle"
+                      class="header__nav-link"
+                      target="_blank"
+                      rel="noopener"
+                      aria-label="Twitter"
+                      aria-describedby="new-window-warning"
+                    >
+                      <svg
+                        class="icon__header"
+                        viewBox="0 0 48 48"
+                        aria-hidden="true"
+                        focusable="false"
+                      >
+                        <use
+                          xmlns:xlink="https://www.w3.org/1999/xlink"
+                          xlink:href="#twitter"
+                        ></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="header__nav-item">
+                    <a
+                      href="https://github.com/svinkle/togglific"
+                      class="header__nav-link"
+                      target="_blank"
+                      rel="noopener"
+                      aria-label="GitHub"
+                      aria-describedby="new-window-warning"
+                    >
+                      <svg
+                        class="icon__header"
+                        viewBox="0 0 48 48"
+                        aria-hidden="true"
+                        focusable="false"
+                      >
+                        <use
+                          xmlns:xlink="https://www.w3.org/1999/xlink"
+                          xlink:href="#github"
+                        ></use>
+                      </svg>
+                    </a>
+                  </li>
                 </ul>
               </nav>
             </div>
@@ -2118,102 +2162,26 @@
     </main>
     <footer id="footer" class="footer">
       <div class="container">
-        <div class="grid grid--footer">
-          <div class="grid__item">
-            <ul class="footer__list">
-              <li class="footer__list-item">
-                <a
-                  href="https://twitter.com/svinkle"
-                  class="footer__list-link"
-                  target="_blank"
-                  rel="noopener"
-                  aria-describedby="new-window-warning"
-                >
-                  <svg
-                    class="icon__footer-list"
-                    viewBox="0 0 48 48"
-                    aria-hidden="true"
-                    focusable="false"
-                  >
-                    <use
-                      xmlns:xlink="https://www.w3.org/1999/xlink"
-                      xlink:href="#twitter"
-                    ></use>
-                  </svg>
-                  <span class="footer__list-link-text">
-                    Get the latest updates on Twitter!
-                  </span>
-                  <svg
-                    class="icon__new-window--footer-link"
-                    viewBox="0 0 48 48"
-                    aria-hidden="true"
-                    focusable="false"
-                  >
-                    <use
-                      xmlns:xlink="https://www.w3.org/1999/xlink"
-                      xlink:href="#new-window"
-                    ></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="footer__list-item">
-                <a
-                  href="https://github.com/svinkle/togglific/issues"
-                  class="footer__list-link"
-                  target="_blank"
-                  rel="noopener"
-                  aria-describedby="new-window-warning"
-                >
-                  <svg
-                    class="icon__footer-list"
-                    viewBox="0 0 48 48"
-                    aria-hidden="true"
-                    focusable="false"
-                  >
-                    <use
-                      xmlns:xlink="https://www.w3.org/1999/xlink"
-                      xlink:href="#github"
-                    ></use>
-                  </svg>
-                  <span class="footer__list-link-text">
-                    Report issues or feature requests on GitHub!
-                  </span>
-                  <svg
-                    class="icon__new-window--footer-link"
-                    viewBox="0 0 48 48"
-                    aria-hidden="true"
-                    focusable="false"
-                  >
-                    <use
-                      xmlns:xlink="https://www.w3.org/1999/xlink"
-                      xlink:href="#new-window"
-                    ></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="footer__list-item">
-                <span class="logo-font logo-font--light">Togglific</span>
-                is
-                <span role="img" aria-label="coded">⌨️</span>
-                with
-                <span role="img" aria-label="love">❤️</span>
-                by
-                <a href="https://twitter.com/svinkle" class="footer__list-link">
-                  <span class="footer__list-link-text">@svinkle</span>
-                </a>
-                and is released under the
-                <a
-                  href="https://github.com/svinkle/togglific/blob/master/LICENSE.md"
-                  class="footer__list-link"
-                >
-                  <span class="footer__list-link-text">MIT license</span>
-                </a>. You are free to use the code from this library for both
-                personal and commercial use.
-              </li>
-            </ul>
-          </div>
-          <div class="grid__item"></div>
-        </div>
+        <p class="footer__content">
+          <span class="logo-font logo-font--light">Togglific</span>
+          is
+          <span role="img" aria-label="coded">⌨️</span>
+          with
+          <span role="img" aria-label="love">❤️</span>
+          by
+          <a href="https://twitter.com/svinkle" class="footer__list-link">
+            <span class="footer__list-link-text">@svinkle</span>
+          </a>
+          and is released under the
+          <a
+            href="https://github.com/svinkle/togglific/blob/master/LICENSE.md"
+            class="footer__list-link"
+          >
+            <span class="footer__list-link-text">MIT license</span>
+          </a>
+          . You are free to use the code from this library for both personal and
+          commercial use.
+        </p>
       </div>
     </footer>
     <div hidden>
@@ -2474,10 +2442,15 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="javascript/brochure.min.js"></script>
     <!-- <![endif] -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-133943880-1"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-133943880-1"
+    ></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
+      function gtag() {
+        dataLayer.push(arguments);
+      }
       gtag('js', new Date());
       gtag('config', 'UA-133943880-1');
     </script>
