@@ -21,7 +21,7 @@ The following animated elements will _paused_ on button click:
 
 ## Demo
 
-Check out the [demo section](https://togglific.io#demos) to see Togglific in action!
+Check out the [demo section](https://svinkle.github.io/togglific#demos) to see Togglific in action!
 
 ---
 
@@ -101,7 +101,7 @@ new toggler.Togglific([options], 'toggler');
 
 #### Bookmarklet
 
-Simply drag the [Bookmarklet!](https://togglific.io#bookmarklet) link to your bookmarks bar in your browser and you're all set!
+Simply drag the [Bookmarklet!](https://svinkle.github.io/togglific#bookmarklet) link to your bookmarks bar in your browser and you're all set!
 
 ### Browser extensions
 
