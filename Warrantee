@@ -1,0 +1,11 @@
+1. This project will not change ownership without an opt-in notification sent to all users a) asking whether they'd like to keep using the service b) identifying the new owners.
+
+2. 'Ownership' herein means right to change code, or compiled code, without consultation or permission or the right to alter the accounts that may do so. 
+
+3. In addition, should the substance of this warrantee be weakened or any rights accorded herein diminished, the same process, mutatis mutandis, as in the first clause will be followed
+
+4. This project warrants that to do otherwise than described in clauses 1 and 3 would be a breach of user trust and believes that legal action for damages should be taken should this occur.
+
+5. This project warrants that it is understood that the Javascript community and browser extensions communities are deeply vulnerable to malicious actors and therefore agrees that transfer of ownership without some reasonable due diligence and proper notification would constitute negiligent disregard for user trust and negiligent exposure to harm.
+
+6. None of the above applies to unwilling actions, for example as the result of a hack.
