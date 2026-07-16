@@ -10,12 +10,12 @@ const strings = {
 chrome.runtime.onMessage.addListener((request, sender) => {
   if (request[strings.setIconRequest]) {
     if (request[strings.setIconRequest] === 'true') {
-      chrome.browserAction.setIcon({
+      chrome.action.setIcon({
         tabId: sender.tab.id,
         path: strings.animateIcon
       });
     } else {
-      chrome.browserAction.setIcon({
+      chrome.action.setIcon({
         tabId: sender.tab.id,
         path: strings.freezeIcon
       });
@@ -23,21 +23,16 @@ chrome.runtime.onMessage.addListener((request, sender) => {
   }
 });
 
-chrome.browserAction.onClicked.addListener((tab) => {
+chrome.action.onClicked.addListener((tab) => {
   chrome.tabs.sendMessage(tab.id, {[strings.clickIconRequest]: true});
 
-  chrome.tabs.executeScript(tab.id, {
-    code: `
-      if (localStorage.getItem('${strings.localStorageItem}') == null) {
-          localStorage.setItem('${strings.localStorageItem}', false);
-      } else {
-        localStorage.setItem('${
-  strings.localStorageItem
-}', localStorage.getItem('${
-  strings.localStorageItem
-}') === 'true' ? false : true);
-      }
-    `
+  chrome.scripting.executeScript({
+    target: {tabId: tab.id},
+    files: ['toggle-storage.js']
   });
-  chrome.tabs.executeScript(tab.id, {file: strings.contentScript});
+
+  chrome.scripting.executeScript({
+    target: {tabId: tab.id},
+    files: [strings.contentScript]
+  });
 });
