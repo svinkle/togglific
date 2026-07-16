@@ -60,10 +60,7 @@ module.exports = function(config) {
       './src/components/*.component.spec.js': ['webpack'],
       './test/index.js': ['webpack']
     },
-    webpackMiddleware: {
-      noInfo: true,
-      stats: 'errors-only'
-    },
+
     reporters: ['progress', 'kjhtml'],
     port: 9876,
     colors: true,
@@ -84,9 +81,7 @@ module.exports = function(config) {
         ]
       }
     },
-    webpackServer: {
-      noInfo: true
-    },
+
     customLaunchers: {
       ChromeHeadless: {
         base: 'Chrome',

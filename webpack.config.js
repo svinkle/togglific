@@ -1,5 +1,4 @@
 const path = require('path');
-const WebpackShellPlugin = require('webpack-shell-plugin');
 
 const config = {
 
@@ -27,12 +26,7 @@ const config = {
     output: {
       path: './src/bundles/bookmarklet',
       filename: 'bundle-demo.js'
-    },
-    plugins: [
-      new WebpackShellPlugin({
-        onBuildExit: ['npm run bookmarklet-demo']
-      })
-    ]
+    }
   },
 
   // Browser extension files
@@ -89,7 +83,10 @@ module.exports = [
     output: {
       path: path.resolve(__dirname, config.standAlone.output.path),
       filename: config.standAlone.output.filename,
-      library: 'Togglific'
+      library: {
+        name: 'Togglific',
+        type: 'var'
+      }
     },
     module: config.module
   },
@@ -111,8 +108,7 @@ module.exports = [
       path: path.resolve(__dirname, config.bookmarkletDemo.output.path),
       filename: config.bookmarkletDemo.output.filename
     },
-    module: config.module,
-    plugins: config.bookmarkletDemo.plugins
+    module: config.module
   },
 
   // Browser extension
@@ -125,13 +121,15 @@ module.exports = [
     module: config.module
   },
 
-  // `npm` package`
+  // `npm` package
   {
     entry: config.npmPackage.entry,
     output: {
       path: path.resolve(__dirname, config.npmPackage.output.path),
       filename: config.npmPackage.output.filename,
-      libraryTarget: 'commonjs2'
+      library: {
+        type: 'commonjs2'
+      }
     },
     module: config.module
   },
