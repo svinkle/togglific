@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Togglific",
   "author": "Scott Vinkle <scott.vinkle@shopify.com>",
-  "version": "0.16.0",
+  "version": "0.16.1",
   "description": "Do you find web animations distracting? Togglific provides a distraction-free web experience!",
   "homepage_url": "https://togglific.io",
   "icons": {

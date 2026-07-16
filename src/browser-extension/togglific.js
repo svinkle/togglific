@@ -6,7 +6,7 @@
  * Check out the GitHub repo for more information: https://github.com/svinkle/togglific
  *
  * @author Scott Vinkle <scott.vinkle@shopify.com>
- * @version 0.16.0
+ * @version 0.16.1
  * @license MIT
  */
 

@@ -1,6 +1,6 @@
 {
   "name": "togglific",
-  "version": "0.16.0",
+  "version": "0.16.1",
   "description": "Do you find web animations distracting? Togglific provides a distraction-free web experience!",
   "main": "index.js",
   "scripts": {
@@ -22,7 +22,7 @@
     "stand-alone-copy": "cp src/bundles/stand-alone/bundle.js dist/stand-alone/togglific.js",
     "browser-extension-build": "npm run browser-extension-clean && npm run browser-extension-copy && npm run browser-extension-zip",
     "browser-extension-clean": "rm -rf dist/browser-extension && mkdir dist/browser-extension",
-    "browser-extension-copy": "cp src/bundles/browser-extension/bundle.js dist/browser-extension/togglific.js && cp src/browser-extension/background.js dist/browser-extension/ && cp src/browser-extension/manifest.json dist/browser-extension/ && cp -r src/browser-extension/icons dist/browser-extension/",
+    "browser-extension-copy": "cp src/bundles/browser-extension/bundle.js dist/browser-extension/togglific.js && cp src/browser-extension/background.js dist/browser-extension/ && cp src/browser-extension/toggle-storage.js dist/browser-extension/ && cp src/browser-extension/manifest.json dist/browser-extension/ && cp -r src/browser-extension/icons dist/browser-extension/",
     "browser-extension-zip": "cd dist/browser-extension/ && bestzip togglific.zip *",
     "copy-to-brochure": "cp ./dist/bookmarklet/togglific.js ./brochure/javascript/togglific.js",
     "copy-to-npm": "cp ./.gitignore ./dist/npm-package && cp ./LICENSE.txt ./dist/npm-package && cp ./package.json ./dist/npm-package  && cp ./README.md ./dist/npm-package",
@@ -59,6 +59,7 @@
     "@babel/polyfill": "^7.0.0",
     "@babel/preset-env": "^7.2.0",
     "@babel/runtime": "^7.2.0",
+    "ajv": "^8.8.2",
     "autoprefixer": "^10.4.0",
     "babel-loader": "^9.0.0",
     "bestzip": "^2.1.2",

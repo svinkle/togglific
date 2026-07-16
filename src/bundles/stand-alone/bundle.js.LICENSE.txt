@@ -1,0 +1,11 @@
+/**
+ * Togglific
+ *
+ * "Enjoy a distraction-free web experience!"
+ *
+ * Check out the GitHub repo for more information: https://github.com/svinkle/togglific
+ *
+ * @author Scott Vinkle <scott.vinkle@shopify.com>
+ * @version 0.16.0
+ * @license MIT
+ */
